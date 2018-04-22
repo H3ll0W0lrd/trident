@@ -1,7 +1,7 @@
 # 简介
-    trident可以安全地分析出redis与redis cluster所有的big key，可以安全地删除匹配某个正则的所有KEY， 可以安全地dump出匹配某个正则的所有KEY的内容<br />
-    trident解决了redis-cli --bigkeys抽样与list等复合类型的KEY不准确的问题， 也解决了现在某些同类型的工具速度慢的问题<br />
-    在唯品会内部比较多应用的是扫描出所有redis/redis cluster中的big key, 扫描出匹配某个正则的KEY，dump特定的KEY的内容来进行debug<br />\
+    trident可以安全地分析出redis与redis cluster所有的big key，可以安全地删除匹配某个正则的所有KEY， 可以安全地dump出匹配某个正则的所有KEY的内容<br/>
+    trident解决了redis-cli --bigkeys抽样与list等复合类型的KEY不准确的问题， 也解决了现在某些同类型的工具速度慢的问题<br/>
+    在唯品会内部比较多应用的是扫描出所有redis/redis cluster中的big key, 扫描出匹配某个正则的KEY，dump特定的KEY的内容来进行debug<br/>
     有任何的bug或者使用建议欢迎反馈laijunshou@gmail.com。
         1）生成csv格式的bigkey报表， 指定--st --li xxx会按KEY大小排序并输出最大的XXX个KEY：
             ./trident -H xx -P xx  -s 1 -t 3 -w bigkey -ec 100 -ei 2 -kc 100 -ki 10  -si 10 -li 3 -st -n 0
